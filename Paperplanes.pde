@@ -227,6 +227,9 @@ void draw() {
         plane.seek(targetBehindCam);
       }
     }
+    if(key == ' ') {
+      saveFrame("frames/f#####.png");
+    }
   }
   for(SteeredPaperplane plane : magentaPlanes) {
     plane.flock(magentaPlanes);
@@ -238,7 +241,6 @@ void draw() {
     plane.update();
     plane.display();
   }
-  saveFrame("frames/f#####.png");
 }
 
 void setupCamera() {
